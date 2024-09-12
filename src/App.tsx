@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles/All.css";
-import "./App.css";
 import { Board } from "./class/Board";
 import BoardRender from "./components/BoardRender";
 import Logo from "./components/Logo";

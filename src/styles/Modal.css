@@ -54,10 +54,8 @@
   padding: calc(10% / 2) calc(20% / 2);
   text-align: center;
 
-  div {
+  p {
     font-size: var(--h3-size);
-    font-weight: 600;
-    color: #000;
   }
   @media (max-width: 500px) {
     h1 {
@@ -66,7 +64,7 @@
     h2 {
       font-size: 16px;
     }
-    div {
+    p {
       font-size: 10px;
     }
   }

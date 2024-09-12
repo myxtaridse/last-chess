@@ -39,7 +39,7 @@
 
   @media (max-width: 550px) {
     font-size: 6px;
-    width: 150px;
-    left: calc((100vw - 150px) / 2);
+    width: max-content;
+    left: calc((100vw - max-content) / 2);
   }
 }

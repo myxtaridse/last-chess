@@ -6,6 +6,7 @@ body {
   margin: 0;
   background-color: #171717;
   font-weight: 500;
+  color: black;
 }
 .app {
   position: relative;

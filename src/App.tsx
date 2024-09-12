@@ -15,12 +15,12 @@ import { Cell } from "./class/Cell";
 function App() {
   const [board, setBoard] = React.useState(new Board());
   const [currentPlayer, setCurrentPlayer] = React.useState<Player | null>(null);
-  const [whitePlayer, setWhitePlayer] = React.useState<Player | null>(
-    new Player(Colors.WHITE)
-  );
-  const [blackPlayer, setBlackPlayer] = React.useState<Player | null>(
-    new Player(Colors.BLACK)
-  );
+  // const [whitePlayer, setWhitePlayer] = React.useState<Player | null>(
+  //   new Player(Colors.WHITE)
+  // );
+  // const [blackPlayer, setBlackPlayer] = React.useState<Player | null>(
+  //   new Player(Colors.BLACK)
+  // );
 
   const [prevCell, setPrevCell] = React.useState<Cell | null>(null);
   const [nowCell, setNowCell] = React.useState<Cell | null>(null);
@@ -65,7 +65,9 @@ function App() {
 
   function swapPlayer() {
     setCurrentPlayer(
-      currentPlayer?.color === Colors.BLACK ? whitePlayer : blackPlayer
+      currentPlayer?.color === Colors.BLACK
+        ? board.whitePlayer
+        : board.blackPlayer
     );
   }
 
@@ -83,7 +85,7 @@ function App() {
   };
   React.useEffect(() => {
     restart();
-    setCurrentPlayer(whitePlayer);
+    setCurrentPlayer(board.whitePlayer);
   }, []);
 
   return (
@@ -103,19 +105,21 @@ function App() {
         />
         <Direction
           playerColor={
-            currentPlayer === blackPlayer ? whitePlayer : blackPlayer
+            currentPlayer === board.blackPlayer
+              ? board.whitePlayer
+              : board.blackPlayer
           }
           board={board}
           currentPlayer={currentPlayer}
-          timer={currentPlayer === blackPlayer ? minW : minB}
-          sec={currentPlayer === blackPlayer ? secW : secB}
+          timer={currentPlayer === board.blackPlayer ? minW : minB}
+          sec={currentPlayer === board.blackPlayer ? secW : secB}
         />
         <Direction
           playerColor={currentPlayer}
           board={board}
           currentPlayer={currentPlayer}
-          timer={currentPlayer === blackPlayer ? minB : minW}
-          sec={currentPlayer === blackPlayer ? secB : secW}
+          timer={currentPlayer === board.blackPlayer ? minB : minW}
+          sec={currentPlayer === board.blackPlayer ? secB : secW}
         />
         <Footer />
         {!board.isGame && !board.isEnd && (
@@ -131,7 +135,9 @@ function App() {
           <ModalEnd
             isEnd={isEnd}
             currentPlayer={
-              currentPlayer === blackPlayer ? whitePlayer : blackPlayer
+              currentPlayer === board.blackPlayer
+                ? board.whitePlayer
+                : board.blackPlayer
             }
           />
         )}

@@ -8,6 +8,7 @@ import { King } from "./figures/King";
 import { Pawn } from "./figures/Pawn";
 import { Cell } from "./Cell.ts";
 import { Figure } from "./Figure.ts";
+import { Player } from "./Player.ts";
 
 const vertical = ["1", "2", "3", "4", "5", "6", "7", "8"];
 const horizontal = ["a", "b", "c", "d", "e", "f", "g", "h"];
@@ -25,6 +26,8 @@ export class Board {
   isEnd: boolean = false;
   prevCell: Cell | null = null;
   nowCell: Cell | null = null;
+  blackPlayer: Player | null = new Player(Colors.BLACK);
+  whitePlayer: Player | null = new Player(Colors.WHITE);
 
   public initCells() {
     // Пробегаемся по массиву, добавляя туда и строки и столбцы с разными цветами

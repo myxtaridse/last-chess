@@ -1,0 +1,20 @@
+:root {
+  --h1-size: 34px;
+  --h2-size: 26px;
+  --h3-size: 18px;
+  --h5-size: 14px;
+}
+@media (max-width: 1600px) {
+  :root {
+    --h1-size: 26px;
+    --h2-size: 18px;
+    --h3-size: 14px;
+    --h5-size: 10px;
+  }
+}
+h1 {
+  font-size: var(--h1-size);
+}
+h2 {
+  font-size: var(--h2-size);
+}

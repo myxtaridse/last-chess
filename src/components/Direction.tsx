@@ -22,6 +22,8 @@ const Direction: React.FC<DirectionProps> = ({
   timer,
   sec,
 }) => {
+  // console.log(playerColor === currentPlayer, playerColor);
+
   return (
     <div
       className={[
@@ -53,9 +55,7 @@ const Direction: React.FC<DirectionProps> = ({
         </div>
       </div>
       <div className="moves">
-        <div>
-          <Timer timer={timer} sec={sec} />
-        </div>
+        <Timer timer={timer} sec={sec} />
         <div className="moves-player">
           <span>Ходы:</span>
           <div className="moves-flex">

@@ -15,9 +15,12 @@ import { Cell } from "./class/Cell";
 function App() {
   const [board, setBoard] = React.useState(new Board());
   const [currentPlayer, setCurrentPlayer] = React.useState<Player | null>(null);
-
-  const whitePlayer = new Player(Colors.WHITE);
-  const blackPlayer = new Player(Colors.BLACK);
+  const [whitePlayer, setWhitePlayer] = React.useState<Player | null>(
+    new Player(Colors.WHITE)
+  );
+  const [blackPlayer, setBlackPlayer] = React.useState<Player | null>(
+    new Player(Colors.BLACK)
+  );
 
   const [prevCell, setPrevCell] = React.useState<Cell | null>(null);
   const [nowCell, setNowCell] = React.useState<Cell | null>(null);

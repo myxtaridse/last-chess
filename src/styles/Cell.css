@@ -44,6 +44,11 @@
   height: 18px;
   background-color: #aaaaaa;
   border-radius: 50%;
+
+  @media (max-width: 500px) {
+    width: 10px;
+    height: 10px;
+  }
 }
 .availableFigure {
   z-index: 10;
@@ -52,6 +57,12 @@
   height: 45px;
   border-radius: 50%;
   border: 9px solid #29a8a4;
+
+  @media (max-width: 500px) {
+    width: 17px;
+    height: 17px;
+    border: 4px solid #29a8a4;
+  }
 }
 
 .prev-cell {

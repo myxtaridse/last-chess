@@ -21,7 +21,9 @@
     left: 20px;
   }
   @media (max-width: 550px) {
-    display: none;
+    width: 30px;
+    left: calc((100vw - 30px) / 2);
+    top: 10px;
   }
 
   img {
@@ -36,6 +38,8 @@
   font-size: var(--h5-size);
 
   @media (max-width: 550px) {
-    display: none;
+    font-size: 6px;
+    width: 150px;
+    left: calc((100vw - 150px) / 2);
   }
 }

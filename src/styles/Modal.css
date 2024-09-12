@@ -54,9 +54,9 @@
   padding: calc(10% / 2) calc(20% / 2);
   text-align: center;
 
-  p {
+  /* p {
     font-size: var(--h3-size);
-  }
+  } */
   @media (max-width: 500px) {
     h1 {
       font-size: 18px;
@@ -64,9 +64,9 @@
     h2 {
       font-size: 16px;
     }
-    p {
+    /* p {
       font-size: 10px;
-    }
+    } */
   }
 }
 .modal-time {

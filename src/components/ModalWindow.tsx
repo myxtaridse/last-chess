@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "/last-chess/logo.svg";
+import logo from "/logo.svg";
 
 interface ModalWindowProps {
   isGame: boolean;

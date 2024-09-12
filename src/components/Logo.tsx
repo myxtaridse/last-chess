@@ -1,4 +1,4 @@
-import logo from "../assets/images/logo.svg";
+import logo from "/last-chess/logo.svg";
 
 const Logo = () => {
   return (

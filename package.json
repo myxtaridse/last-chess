@@ -2,7 +2,7 @@
   "name": "last-chess",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://myxtaridse.github.io/proba-chess",
+  "homepage": "https://myxtaridse.github.io/last-chess",
   "type": "module",
   "scripts": {
     "dev": "vite",

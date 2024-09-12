@@ -67,6 +67,9 @@
     /* p {
       font-size: 10px;
     } */
+    .text {
+      font-size: 14px;
+    }
   }
 }
 .modal-time {

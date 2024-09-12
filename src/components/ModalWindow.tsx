@@ -29,7 +29,7 @@ const ModalWindow: React.FC<ModalWindowProps> = ({
         </div>
         <div className="modal-text">
           <h1>Шахматы</h1>
-          <div>
+          <div className="text">
             Добро пожаловать, любители шахмат! <br />
             <br />
             Шахматы - это интеллектуальная игра, история которой насчитывает

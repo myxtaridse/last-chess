@@ -56,15 +56,11 @@ const Direction: React.FC<DirectionProps> = ({
       </div>
       <div className="moves">
         <Timer timer={timer} sec={sec} />
-        <div className="moves-player">
-          <span>Ходы:</span>
-          <div className="moves-flex">
-            {playerColor?.color === Colors.BLACK
-              ? board.moveBlack.map((move) => <p key={Math.random()}>{move}</p>)
-              : board.moveWhite.map((move) => (
-                  <p key={Math.random()}>{move}</p>
-                ))}
-          </div>
+
+        <div className="moves-flex">
+          {playerColor?.color === Colors.BLACK
+            ? board.moveBlack.map((move) => <p key={Math.random()}>{move}</p>)
+            : board.moveWhite.map((move) => <p key={Math.random()}>{move}</p>)}
         </div>
       </div>
     </div>

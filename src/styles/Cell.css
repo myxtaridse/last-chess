@@ -10,6 +10,24 @@
     height: 70px;
   }
 
+  @media (max-width: 1600px) {
+    width: 80px;
+    height: 80px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  @media (max-width: 1480px) {
+    width: 70px;
+    height: 70px;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
   @media (max-width: 900px) {
     width: 50px;
     height: 50px;
@@ -45,6 +63,10 @@
   background-color: #aaaaaa;
   border-radius: 50%;
 
+  @media (max-width: 1600px) {
+    width: 14px;
+    height: 14px;
+  }
   @media (max-width: 500px) {
     width: 10px;
     height: 10px;
@@ -58,6 +80,11 @@
   border-radius: 50%;
   border: 9px solid #29a8a4;
 
+  @media (max-width: 1600px) {
+    width: 35px;
+    height: 35px;
+    border: 7px solid #29a8a4;
+  }
   @media (max-width: 500px) {
     width: 17px;
     height: 17px;

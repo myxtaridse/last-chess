@@ -4,7 +4,16 @@
   height: calc(100px * 8);
   display: flex;
   flex-wrap: wrap;
-
+  @media (max-width: 1600px) {
+    margin: calc((100vh - 80px * 8) / 2) calc((100vw - 80px * 8) / 2);
+    width: calc(80px * 8);
+    height: calc(80px * 8);
+  }
+  @media (max-width: 1480px) {
+    margin: calc((100vh - 70px * 8) / 2) calc((100vw - 70px * 8) / 2);
+    width: calc(70px * 8);
+    height: calc(70px * 8);
+  }
   @media (max-width: 900px) {
     margin: calc((100vh - 50px * 8) / 2) calc((100vw - 50px * 8) / 2);
     width: calc(50px * 8);

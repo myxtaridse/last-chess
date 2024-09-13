@@ -373,18 +373,10 @@ export class Cell {
           if (
             cell.figure?.color !== thisCell.figure?.color &&
             cell.figure?.name === FigureNames.PAWN
+            // && onCell.y === cell.y &&
+            // (onCell.x === cell.x + 1 || onCell.x === cell.x - 1)
           ) {
-            if (cell.figure.canMove(onCell)) console.log(cell, onCell);
-            // if (cell.figure?.canMove(onCell) && onCell.x !== cell.x) {
-            //   console.log(cell, onCell);
-
-            //   return true;
-            // }
-            // if (!cell.figure?.canMove(onCell) && onCell.x === cell.x) {
-            //   console.log(cell, onCell);
-
-            //   return false;
-            // }
+            console.log(cell, onCell, cell.y, onCell.y);
           }
           if (
             cell.figure?.color !== thisCell.figure?.color &&

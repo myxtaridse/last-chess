@@ -6,10 +6,38 @@
   padding: 10px;
   border: none;
   border-radius: 20px;
+
+  @media (max-width: 1800px) {
+    padding: 5px 10px;
+    width: 380px;
+    right: 0;
+    border-radius: 20px 0 0 20px;
+  }
+  @media (max-width: 1480px) {
+    padding: 5px 10px;
+    max-width: 85vw;
+    min-width: 700px;
+    width: max-content;
+    height: max-content;
+    min-height: 80px;
+    max-height: 120px;
+    right: 0;
+  }
+  @media (max-width: 1050px) {
+    padding: 5px 10px;
+    max-width: 700px;
+    min-width: 300px;
+    width: max-content;
+    height: max-content;
+    min-height: 80px;
+    max-height: 120px;
+    right: 0;
+  }
   @media (max-width: 900px) {
     padding: 5px 10px;
     max-width: 85vw;
-    min-width: 300px;
+    min-width: 400px;
+    width: max-content;
     right: 0;
     border-radius: 20px 0 0 20px;
   }
@@ -31,21 +59,33 @@
 .direction-top {
   top: 40px;
 
+  @media (max-width: 1480px) {
+    top: 0;
+    border-radius: 0 0 0 20px;
+  }
   @media (max-width: 900px) {
     top: 30px;
+    border-radius: 20px 0 0 20px;
   }
   @media (max-width: 550px) {
     top: 50px;
+    border-radius: 0;
   }
 }
 .direction-bottom {
   bottom: 40px;
 
+  @media (max-width: 1480px) {
+    bottom: 0;
+    border-radius: 20px 0 0 0;
+  }
   @media (max-width: 900px) {
     bottom: 30px;
+    border-radius: 20px 0 0 20px;
   }
   @media (max-width: 550px) {
     bottom: 50px;
+    border-radius: 0;
   }
 }
 .direction-w {
@@ -57,13 +97,13 @@
   align-items: start;
   justify-content: center;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1600px) {
     justify-content: start;
   }
 }
 .playerImg {
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -71,10 +111,19 @@
   gap: 20px;
 
   img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
+  @media (max-width: 1600px) {
+    width: 55px;
+    height: 55px;
+
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
   @media (max-width: 900px) {
     width: 50px;
     height: 50px;
@@ -109,6 +158,24 @@
   border: 2px solid grey;
   background-color: transparent;
 
+  @media (max-width: 1600px) {
+    width: max-content;
+    min-width: 150px;
+    max-width: 300px;
+    min-height: 25px;
+  }
+  @media (max-width: 1480px) {
+    width: max-content;
+    min-width: 300px;
+    max-width: 85vw;
+    min-height: 25px;
+  }
+  @media (max-width: 1050px) {
+    width: max-content;
+    min-width: 150px;
+    /* max-width: 500px; */
+    min-height: 25px;
+  }
   @media (max-width: 900px) {
     width: max-content;
     min-width: 150px;
@@ -127,24 +194,45 @@
   align-items: start;
   justify-content: start;
   padding: 0 10px;
+
   .moves-flex {
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+
     p {
       display: inline;
       padding: 0 5px;
       margin: 0;
     }
   }
+  @media (max-width: 1600px) {
+    padding: 0;
+    /* height: 10px; */
+    span {
+      display: none;
+    }
+    .moves-flex {
+      padding-left: 20px;
+      padding-right: 10px;
+      margin-top: -5px;
+
+      p {
+        display: inline;
+        padding: 0 2px;
+        margin: 0;
+        font-size: 10px;
+      }
+    }
+  }
   @media (max-width: 900px) {
     .moves-player {
       font-size: var(--h3-size);
 
-      .moves-flex p {
-        font-size: var(--h5-size);
-      }
+      /* .moves-flex p {
+        font-size: 10px;
+      } */
     }
   }
   @media (max-width: 500px) {
@@ -155,24 +243,35 @@
     }
     .moves-flex {
       padding-left: 13px;
+      padding-right: 10px;
       margin-top: -5px;
 
       p {
         display: inline;
         padding: 0 2px;
         margin: 0;
+        font-size: 8px;
       }
     }
   }
 }
 .timer {
-  width: 75px;
+  padding: 8px 20px;
+  width: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--h3-size);
+  font-size: 20px;
   font-family: "Akshar", sans-serif;
-
+  @media (max-width: 1600px) {
+    width: max-content;
+    padding: 10px 10px 5px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    height: 20px;
+  }
   @media (max-width: 900px) {
     width: 75px;
     align-items: start;

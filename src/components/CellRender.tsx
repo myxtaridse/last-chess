@@ -52,12 +52,16 @@ const CellRender: React.FC<CellRenderProps> = React.memo(
           cell.color === Colors.BLACK ? "cell-b" : "cell-w",
           selected ? "selected" : "",
           cell === prevCell
-            ? "prev-cell"
+            ? prevCell.color === Colors.BLACK
+              ? "prev-cell"
+              : "now-cell"
             : cell.color === Colors.BLACK
             ? "cell-b"
             : "cell-w",
           cell.figure?.cell === nowCell
-            ? "now-cell"
+            ? nowCell.color === Colors.BLACK
+              ? "prev-cell"
+              : "now-cell"
             : cell.color === Colors.BLACK
             ? "cell-b"
             : "cell-w",
